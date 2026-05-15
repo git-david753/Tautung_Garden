@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>洪媽花園 植物圖鑑</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: #f5f0e8;
+    color: #2d2d2d;
+    min-height: 100vh;
+  }
+
+  header {
+    background: #2c5f2e;
+    color: #f0e6c8;
+    text-align: center;
+    padding: 48px 24px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      rgba(255,255,255,0.03) 20px,
+      rgba(255,255,255,0.03) 40px
+    );
+  }
+
+  header h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    position: relative;
+  }
+
+  header p {
+    font-size: 1rem;
+    opacity: 0.75;
+    margin-top: 10px;
+    letter-spacing: 0.1em;
+    position: relative;
+  }
+
+  .subtitle-bar {
+    background: #d4a843;
+    color: #2c2000;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 28px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid #e8e0d0;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+  }
+
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    background: #e8e8e0;
+  }
+
+  .card-img-placeholder {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #e8f5e1, #d0e8c0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+  }
+
+  .card-body {
+    padding: 18px 20px 20px;
+  }
+
+  .card-number {
+    display: inline-block;
+    background: #2c5f2e;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .card-name {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a3a1b;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+
+  .card-latin {
+    font-size: 0.78rem;
+    color: #7a8c6e;
+    font-style: italic;
+    letter-spacing: 0.03em;
+  }
+
+  .card-divider {
+    height: 1px;
+    background: #f0ebe0;
+    margin: 12px 0;
+  }
+
+  .card-tag {
+    display: inline-block;
+    background: #f0f7ee;
+    color: #3a6b3c;
+    font-size: 0.72rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid #c8dfc8;
+    margin: 2px 2px 2px 0;
+  }
+
+  footer {
+    background: #2c5f2e;
+    color: rgba(240,230,200,0.7);
+    text-align: center;
+    padding: 24px;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+  }
+
+  @media print {
+    body { background: white; }
+    .card { break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🌿 洪媽花園</h1>
+  <p>植物圖鑑 · Plant Guide</p>
+</header>
+<div class="subtitle-bar">共 18 種植物 · 2026年整理</div>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- 1. 銀葉郎德木 -->
+    <div class="card">
+      <img class="card-img" 
+        src="https://www.mygardenlife.com/wp-content/uploads/2020/12/silver-plants-2.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="銀葉郎德木">
+      <div class="card-img-placeholder" style="display:none;">🌿</div>
+      <div class="card-body">
+        <span class="card-number">01</span>
+        <div class="card-name">銀葉郎德木</div>
+        <div class="card-latin">Rondeletia leucophylla</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">灌木</span>
+        <span class="card-tag">銀葉</span>
+        <span class="card-tag">熱帶</span>
+      </div>
+    </div>
+
+    <!-- 2. 白鶴靈芝 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://www.coa.gov.tw/ws.php?id=2512130&al=1"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="白鶴靈芝">
+      <div class="card-img-placeholder" style="display:none;">🍄</div>
+      <div class="card-body">
+        <span class="card-number">02</span>
+        <div class="card-name">白鶴靈芝</div>
+        <div class="card-latin">Rhinacanthus nasutus</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">藥用</span>
+        <span class="card-tag">多年生</span>
+        <span class="card-tag">白花</span>
+      </div>
+    </div>
+
+    <!-- 3. 射干 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://gobotany.nativeplanttrust.org/media/img/taxa/iris_domestica_1.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="射干">
+      <div class="card-img-placeholder" style="display:none;">🌸</div>
+      <div class="card-body">
+        <span class="card-number">03</span>
+        <div class="card-name">射干</div>
+        <div class="card-latin">Iris domestica</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">多年生</span>
+        <span class="card-tag">橙花</span>
+        <span class="card-tag">藥用</span>
+      </div>
+    </div>
+
+    <!-- 4. 欖仁樹 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://toptropicals.com/pics/garden/07/4/4763.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="欖仁樹">
+      <div class="card-img-placeholder" style="display:none;">🌳</div>
+      <div class="card-body">
+        <span class="card-number">04</span>
+        <div class="card-name">欖仁樹</div>
+        <div class="card-latin">Terminalia catappa</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">喬木</span>
+        <span class="card-tag">遮蔭</span>
+        <span class="card-tag">熱帶</span>
+      </div>
+    </div>
+
+    <!-- 5. 百萬心 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://worldofsucculents.com/wp-content/uploads/2014/09/Dischidia-ruscifolia4.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="百萬心">
+      <div class="card-img-placeholder" style="display:none;">💚</div>
+      <div class="card-body">
+        <span class="card-number">05</span>
+        <div class="card-name">百萬心</div>
+        <div class="card-latin">Dischidia ruscifolia</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">蔓性</span>
+        <span class="card-tag">吊盆</span>
+        <span class="card-tag">心形葉</span>
+      </div>
+    </div>
+
+    <!-- 6. 澳洲茶樹 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Melaleuca_alternifolia_foliage_and_flowers.jpg/640px-Melaleuca_alternifolia_foliage_and_flowers.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="澳洲茶樹">
+      <div class="card-img-placeholder" style="display:none;">🌿</div>
+      <div class="card-body">
+        <span class="card-number">06</span>
+        <div class="card-name">澳洲茶樹</div>
+        <div class="card-latin">Melaleuca alternifolia</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">精油</span>
+        <span class="card-tag">芳香</span>
+        <span class="card-tag">灌木</span>
+      </div>
+    </div>
+
+    <!-- 7. 藍蝴蝶 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Clitoria_ternatea-_Butterfly_pea.jpg/640px-Clitoria_ternatea-_Butterfly_pea.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="藍蝴蝶">
+      <div class="card-img-placeholder" style="display:none;">🦋</div>
+      <div class="card-body">
+        <span class="card-number">07</span>
+        <div class="card-name">藍蝴蝶</div>
+        <div class="card-latin">Clitoria ternatea</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">蔓性</span>
+        <span class="card-tag">藍花</span>
+        <span class="card-tag">食用</span>
+      </div>
+    </div>
+
+    <!-- 8. 紫葉狼尾草 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Pennisetum_setaceum_Rubrum_0zz.jpg/640px-Pennisetum_setaceum_Rubrum_0zz.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="紫葉狼尾草">
+      <div class="card-img-placeholder" style="display:none;">🌾</div>
+      <div class="card-body">
+        <span class="card-number">08</span>
+        <div class="card-name">紫葉狼尾草</div>
+        <div class="card-latin">Pennisetum setaceum 'Rubrum'</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">觀賞草</span>
+        <span class="card-tag">紫葉</span>
+        <span class="card-tag">耐旱</span>
+      </div>
+    </div>
+
+    <!-- 9. 彩葉鳳梨 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Neoregelia_carolinae_2.jpg/640px-Neoregelia_carolinae_2.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="彩葉鳳梨">
+      <div class="card-img-placeholder" style="display:none;">🌺</div>
+      <div class="card-body">
+        <span class="card-number">09</span>
+        <div class="card-name">彩葉鳳梨</div>
+        <div class="card-latin">Neoregelia spp.</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">積水鳳梨</span>
+        <span class="card-tag">彩葉</span>
+        <span class="card-tag">室內</span>
+      </div>
+    </div>
+
+    <!-- 10. 裂葉福祿桐 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Polyscias_fruticosa0.jpg/640px-Polyscias_fruticosa0.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="裂葉福祿桐">
+      <div class="card-img-placeholder" style="display:none;">🌿</div>
+      <div class="card-body">
+        <span class="card-number">10</span>
+        <div class="card-name">裂葉福祿桐</div>
+        <div class="card-latin">Polyscias fruticosa</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">灌木</span>
+        <span class="card-tag">裂葉</span>
+        <span class="card-tag">室內外</span>
+      </div>
+    </div>
+
+    <!-- 11. 木百合 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Leucadendron_argenteum_Kirstenbosch_1.jpg/640px-Leucadendron_argenteum_Kirstenbosch_1.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="木百合">
+      <div class="card-img-placeholder" style="display:none;">🌼</div>
+      <div class="card-body">
+        <span class="card-number">11</span>
+        <div class="card-name">木百合</div>
+        <div class="card-latin">Leucadendron spp.</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">南非</span>
+        <span class="card-tag">切花</span>
+        <span class="card-tag">灌木</span>
+      </div>
+    </div>
+
+    <!-- 12. 長穗木 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Stachytarpheta_jamaicensis_1.jpg/640px-Stachytarpheta_jamaicensis_1.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="長穗木">
+      <div class="card-img-placeholder" style="display:none;">🌿</div>
+      <div class="card-body">
+        <span class="card-number">12</span>
+        <div class="card-name">長穗木</div>
+        <div class="card-latin">Stachytarpheta jamaicensis</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">蝶引</span>
+        <span class="card-tag">紫花</span>
+        <span class="card-tag">多年生</span>
+      </div>
+    </div>
+
+    <!-- 13. 紙莎草 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Cyperus_papyrus_kz01.jpg/640px-Cyperus_papyrus_kz01.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="紙莎草">
+      <div class="card-img-placeholder" style="display:none;">🌾</div>
+      <div class="card-body">
+        <span class="card-number">13</span>
+        <div class="card-name">紙莎草</div>
+        <div class="card-latin">Cyperus papyrus</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">水生</span>
+        <span class="card-tag">埃及</span>
+        <span class="card-tag">觀賞</span>
+      </div>
+    </div>
+
+    <!-- 14. 藍星花 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Evolvulus_glomeratus1.jpg/640px-Evolvulus_glomeratus1.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="藍星花">
+      <div class="card-img-placeholder" style="display:none;">💙</div>
+      <div class="card-body">
+        <span class="card-number">14</span>
+        <div class="card-name">藍星花</div>
+        <div class="card-latin">Evolvulus glomeratus</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">藍花</span>
+        <span class="card-tag">地被</span>
+        <span class="card-tag">多年生</span>
+      </div>
+    </div>
+
+    <!-- 15. 仙丹花 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Ixora_coccinea_-_Kerala.jpg/640px-Ixora_coccinea_-_Kerala.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="仙丹花">
+      <div class="card-img-placeholder" style="display:none;">🌺</div>
+      <div class="card-body">
+        <span class="card-number">15</span>
+        <div class="card-name">仙丹花</div>
+        <div class="card-latin">Ixora coccinea</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">紅花</span>
+        <span class="card-tag">灌木</span>
+        <span class="card-tag">熱帶</span>
+      </div>
+    </div>
+
+    <!-- 16. 黃蟬 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Allamanda_cathartica.jpg/640px-Allamanda_cathartica.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="黃蟬">
+      <div class="card-img-placeholder" style="display:none;">🌼</div>
+      <div class="card-body">
+        <span class="card-number">16</span>
+        <div class="card-name">黃蟬</div>
+        <div class="card-latin">Allamanda cathartica</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">黃花</span>
+        <span class="card-tag">蔓性</span>
+        <span class="card-tag">熱帶</span>
+      </div>
+    </div>
+
+    <!-- 17. 芙蓉菊 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Crossostephium_chinense.jpg/640px-Crossostephium_chinense.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="芙蓉菊">
+      <div class="card-img-placeholder" style="display:none;">🌿</div>
+      <div class="card-body">
+        <span class="card-number">17</span>
+        <div class="card-name">芙蓉菊</div>
+        <div class="card-latin">Crossostephium chinense</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">銀白葉</span>
+        <span class="card-tag">海濱</span>
+        <span class="card-tag">耐鹽</span>
+      </div>
+    </div>
+
+    <!-- 18. 朱蕉 -->
+    <div class="card">
+      <img class="card-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Cordyline_fruticosa2.jpg/640px-Cordyline_fruticosa2.jpg"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        alt="朱蕉">
+      <div class="card-img-placeholder" style="display:none;">🌿</div>
+      <div class="card-body">
+        <span class="card-number">18</span>
+        <div class="card-name">朱蕉</div>
+        <div class="card-latin">Cordyline fruticosa</div>
+        <div class="card-divider"></div>
+        <span class="card-tag">彩葉</span>
+        <span class="card-tag">紅葉</span>
+        <span class="card-tag">室內外</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  洪媽花園植物圖鑑 · 2026年整理 · 共18種植物
+</footer>
+
+</body>
+</html>
